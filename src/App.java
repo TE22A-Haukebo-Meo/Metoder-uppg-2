@@ -2,12 +2,18 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner tb = new Scanner(System.in);
-        System.out.println("Droppa bokstav omedelbums!");
-        String Rawr = tb.nextLine();
-        BiggE(Rawr);
+        System.out.println(ärPrimtal(100));
     }
-    static void BiggE(String Rawr){
-        System.out.println(Rawr.toUpperCase());
+    
+    public static boolean ärPrimtal(int tal){
+        for(int i = 2; i < tal; i++){
+            if(tal % i == 0){
+                return false;
+            }
+            if (i==tal) {
+                continue;
+            }
+        }
+        return true; 
     }
 }
