@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println(ärPrimtal(100));
+        Scanner tb = new Scanner(System.in);
+        System.out.println("Droppa ett tal under 100");
+        int tal = tb.nextInt();
+        System.out.println(ärPrimtal(tal));
     }
     
     public static boolean ärPrimtal(int tal){
